@@ -14,6 +14,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('./models/user');
 const helmet = require('helmet');
+const serverless = require('serverless-http');
 
 const mongoSanitize = require('express-mongo-sanitize');
 
@@ -161,3 +162,6 @@ app.listen(3000, () => {
     console.log('Serving on port 3000')
 })
 
+
+module.exports = app;
+module.exports.handler = serverless(app);
