@@ -35,7 +35,7 @@ const mongoStore = require('connect-mongo');
 
 const dbUrl = process.env.DB_URL;
 
-database.connect();
+// database.connect();
 
 const app = express();
 
